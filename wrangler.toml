@@ -1,0 +1,29 @@
+name = "ai-cloud-workspace"
+main = "src/index.js"
+compatibility_date = "2024-09-25"
+compatibility_flags = ["nodejs_compat"]
+
+# ── D1 Database ──────────────────────────────────────────────
+[[d1_databases]]
+binding = "DB"
+database_name = "ai-cloud-workspace-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# ── KV Namespace ─────────────────────────────────────────────
+[[kv_namespaces]]
+binding = "CACHE"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+# ── R2 Bucket ────────────────────────────────────────────────
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "ai-cloud-workspace-storage"
+
+# ── AI binding (optional, for Workers AI) ────────────────────
+# [ai]
+# binding = "AI"
+
+# ── Secrets (set via: wrangler secret put <NAME>) ────────────
+# GITHUB_TOKEN   – GitHub PAT for repo integration
+# OPENHANDS_KEY  – OpenHands API key
+# QWEN_KEY       – Qwen 3 API key

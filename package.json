@@ -1,0 +1,18 @@
+{
+  "name": "ai-cloud-workspace",
+  "version": "1.0.0",
+  "description": "Unified AI Cloud Workspace — manage AI projects, tasks, and agents on Cloudflare Workers",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute ai-cloud-workspace-db --file=src/schema.sql",
+    "db:init:remote": "wrangler d1 execute ai-cloud-workspace-db --remote --file=src/schema.sql"
+  },
+  "dependencies": {
+    "itty-router": "^4.0.27"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}
