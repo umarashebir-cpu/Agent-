@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════════
 // Unified AI Cloud Workspace — Cloudflare Worker Backend
 // ═══════════════════════════════════════════════════════════════
-import { AutoRouter, json, status } from 'itty-router';
+import { Router, json, status } from 'itty-router';
 import FRONTEND_HTML from './frontend.js';
 
 // ── Helpers ────────────────────────────────────────────────────
@@ -23,7 +23,7 @@ const logActivity = async (db, type, message, meta = {}) => {
 };
 
 // ── Router ──────────────────────────────────────────────────────
-const api = AutoRouter({ format: json });
+const api = Router({ format: json });
 
 // ── Health ─────────────────────────────────────────────────────
 api.get('/api/health', () => ({
