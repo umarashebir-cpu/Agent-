@@ -90,3 +90,4 @@ npm run deploy
 - The GitHub integration requires a `GITHUB_TOKEN` secret. Without it, the endpoint returns a truthful "not connected" response.
 - Qwen 3 and OpenHands API calls require their respective keys as secrets. The UI shows connection status based on the providers table.
 - The frontend is embedded in the Worker as a fallback and can also be served from R2.
+- 
